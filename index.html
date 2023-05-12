@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TPn1 - Iñaki Iriarte</title>
+    <link rel="icon" href="assets/logos/Ford_logo_48x48.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@300;400;700;900&family=Poppins:wght@200;300;400;700;900&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="styles/styles.css">
+</head>
+<body>
+
+    <!--
+
+        MENÚ
+
+    -->
+    <header>
+        <div class="menu">
+            <a href="index.html" class="logo"><img src="assets/logos/Ford_logo_desktop.png" alt="Logo de Ford"></a>
+            <nav>
+                <img src="./assets/logos/hamburguesa.png" alt="Menu" class="hamburguesa">
+                <div class="menuMobile">
+                    <ul>
+                        <li id="mustang" class="dropdown"><a href="#banner">Mustang</a>
+                            <ul class="modelos">
+                                <li><a href="">GT</a></li>
+                                <li><a href="">GT500</a></li>
+                                <li><a href="">Mach 1</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#caracteristicas">Características</a></li>
+                        <li><a href="#historia">Historia</a></li>
+                        <li><a href="#formulario">Test Drive</a></li>
+                        <li><a href="#contacto">Contacto</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+
+    <!--
+
+        BANNER
+
+    -->
+    <div class="banner">
+        <div class="contenedorTitulo">
+            <h1>Mustang Mach 1</h1>
+            <p>El regreso de una leyenda.</p>
+        </div>
+        <img src="" alt="Banner Ford Mustang Mach 1">
+    </div>
+
+
+
+
+    <!--
+
+        CONTENIDO 1
+
+    -->
+    <section id="caracteristicas" class="caracteristicas">
+        <h2>Características Principales</h2>
+        
+        <div class="contenedorArticle">
+            <article>
+                <figure>
+                    <img src="assets/pastillas/motor.webp" alt="Motor">
+                </figure>
+
+                <h3>Motor V8</h3>
+
+                <p>Motor <strong>V8 5.0L TiVCT</strong> con 4 válvulas por cilindro, distribución variable y potencia máxima de <strong>475 CV</strong>.</p>
+            </article>
+
+            <article>
+                <figure>
+                    <img src="assets/pastillas/transmision.webp" alt="Transmisión">
+                </figure>
+
+                <h3>Transmisión Automática</h3>
+
+                <p>Automática secuencial de <strong>10 velocidades</strong> con levas al volante.</p>
+            </article>
+
+            <article>
+                <figure>
+                    <img src="assets/pastillas/amortiguacion.webp" alt="Amortiguación">
+                </figure>
+
+                <h3>Amortiguación MagneRide</h3>
+
+                <p>Dureza variable, una <strong>experiencia de manejo única y personalizable.</strong></p>
+            </article>
+        </div>
+    </section>
+
+
+
+    <!--
+
+        CONTENIDO 2
+
+    -->
+    <section id="historia" class="historia">
+        <div class="mach1-logo"></div>
+
+        <h2>Renace una leyenda</h2>
+
+        <div class="contenedorHistoria">
+            <p>La variante <strong>Mach 1</strong> debutó como modelo en el año <strong>1969</strong>.</p>
+            <p>Su característico nombre <strong>“Mach 1”</strong> se refiere a la velocidad del sonido.</p>
+            <p>El término claramente es muy científico, pero <strong>Ford</strong> evidentemente sintió que connotaba muy bien con el extraordinario rendimiento y la velocidad alcanzada de este modelo.</p>
+            <p>En los años 2003 y 2004, <strong>regresó</strong> al mercado combinando una mecánica moderna con elementos nostálgicos del diseño de 1970.</p>
+        </div>
+
+        <div class="contenedorVideo">
+            <iframe src="https://www.youtube.com/embed/yDk1uXDTxa8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+    </section>
+
+
+
+
+    <!--
+
+        FORMULARIO DE CONTACTO
+
+    -->
+    <section id="formulario" class="testDrive">
+        <form action="">
+            <h2>Nuevo Mustang</h2>
+            <p>Solicitá un Test Drive</p>
+
+            <input type="text" id="nombre" placeholder="Ingrese su nombre.">
+            <input type="text" id="apellido" placeholder="Ingrese su apellido.">
+            <input type="email" id="email" placeholder="Ingrese un email.">
+            <input type="text" id="telefono" placeholder="Ingrese su número de teléfono.">
+            <textarea name="comentario" id="comentario" cols="30" rows="2" placeholder="Ingrese un comentario..."></textarea>
+            <button type="reset" id="reset">Borrar Datos</button>
+            <button type="submit" id="enviar">Solicitar Test Drive</button>
+        </form>
+
+        <div class="logoMustang">
+            <img src="" alt="Logo Mustang">
+        </div>
+    </section>
+
+
+
+    <!--
+
+        FOOTER
+
+    -->
+    <footer id="contacto" class="contenedorFooter">
+        <div class="contenedorItems">
+            <div class="itemFooter redes">
+                <h4>Redes Sociales</h4>
+                <a href="https://www.facebook.com/fordargentina" target="_blank"><img src="assets/redes/FB.png" alt="Facebook"></a>
+                <a href="https://www.instagram.com/fordargentina/" target="_blank"><img src="assets/redes/IG.png" alt="Instagram"></a>
+                <a href="https://twitter.com/FordLatino" target="_blank"><img src="assets/redes/TW.png" alt="Twitter"></a>
+                <a href="https://www.youtube.com/fordargentina" target="_blank"><img src="assets/redes/YT.png" alt="YouTube"></a>
+            </div>
+
+            <div class="itemFooter">
+                <h4>Contacto</h4>
+                <p>Tel.: 0800-888-FORD (3673)</p>
+                <p>WhatsApp:  11 3590 9236</p>
+                <a href="https://www.ford.com.ar/" target="_blank">Sitio Oficial: www.ford.com.ar</a>
+            </div>
+
+            <div class="itemFooter logoFooter">
+                <a href="https://www.ford.com.ar/" target="_blank"><img src="" alt="Ford"></a>
+            </div>
+        </div>
+
+        <p class="firma">Iñaki Iriarte - Interacción con dispositivos móviles - TP nº 1</p>
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,828 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --azulFord: #003478;
+    --azulSombra: #092d5b;
+    --azulClaro: #1b5fb7;
+    --azulTexto: #081534;
+    --gris: #dedede;
+}
+
+
+
+
+/* 
+
+HEADER
+
+*/
+/* Header ocupando el 100% del width para que la barra completa sea azul, el div con la clase menu con un width de 1024px para que el logo y la navegación solo ocupen ese espacio y estén centrados por el flex del padre */
+header{
+    background-color: var(--azulFord);
+    height: 100px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+}
+
+.menu{
+    display: flex;
+    width: 1024px;
+    height: 100%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo{
+    margin: 0 1rem;
+    width: 120px;
+    height: 47px;
+}
+
+.logo img{
+    max-width: 100%;
+    height: auto;
+}
+
+
+/* Img con clase hamburguesa que da una imagen para el menú mobile, con display none para que no se muestre en otras pantallas */
+.hamburguesa{
+    display: none;
+}
+
+nav{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 1rem;
+}
+
+nav ul{
+    display: flex;
+}
+
+nav ul li{
+    color: white;
+    font-size: 1em;
+    padding: 1rem;
+    list-style: none;
+    border-radius: 10px;
+}
+
+nav ul li a{
+    text-decoration: none;
+    color: white;
+}
+
+
+/* Hover a los items de la lista en el nav, para que se note cuando nos estemos posando encima de cada uno con un color de fondo más oscuro y una sombra */
+nav ul li:hover{
+    background-color: var(--azulSombra);
+    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.3);
+}
+
+
+/* Segunda lista desordenada dentro de un li de la primera, con la clase modelos y un display none para que no se muestre cuando no estemos encima del li que la contiene */
+.modelos{
+    display: none;
+}
+
+
+/* Cuando pasamos por encima del li con clase dropdown que contiene al submenú, la lista desordenada con clase modelos toma un display flex para que se muestre, con una posición absoluta y un z-index para que se muestre encima de todo lo que haya en la página, un width 100% y left 0 para que ocupe el ancho total del sitio */
+.dropdown:hover .modelos{
+    display: flex;
+    justify-content: center;
+    left: 0;
+    position: absolute;
+    z-index: 1;
+    margin-top: 1rem;
+    background-color: var(--azulClaro);
+    width: 100%;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+#mustang{
+    border-radius: 4px 4px 0 0;
+}
+
+.modelos li{
+    padding: 2rem;
+    border-radius: 0;
+}
+
+
+
+
+
+
+
+
+/* 
+
+BANNER
+
+*/
+
+/* El contenedor del banner principal ocupa el ancho total del sitio y la imagen es responsive colocandola con un content, con un position relative del contenedor se le aplica un position absolute al div que contiene el texto del H1 y le permite mostrarse encima de la imagen */
+.contenedorBanner{
+    width: 100%;
+    height: 70vh;
+}
+
+.banner{
+    position: relative;
+    width: 100%;
+}
+
+.banner img{
+    width: 100%;
+    content: url(../assets/banners/Banner_1920.jpg);
+    max-width: 100%;
+}
+
+.contenedorTitulo{
+    padding-top: 2rem;
+    padding-left: 1rem;
+    font-family: 'League Spartan', sans-serif;
+    color: white;
+    position: absolute;
+    right: 35%;
+    text-shadow: 0 0 7px rgba(0, 0, 0, 0.6);
+}
+
+.contenedorTitulo h1{
+    font-size: 5em;
+    font-weight: 900;
+    line-height: 0.8em;
+    text-transform: uppercase;
+}
+
+.contenedorTitulo p{
+    font-size: 1.5em;
+}
+
+
+
+
+
+
+
+/* 
+
+PRIMERA SECCIÓN (CARACTERÍSTICAS)
+
+*/
+
+section{
+    font-family: 'League Spartan', sans-serif;
+}
+
+.caracteristicas h2{
+    font-size: 3rem;
+    color: var(--azulTexto);
+    height: auto;
+    text-align: center;
+    padding: 3rem 0;
+}
+
+/* Contenedor de las pastillas de contenido en características con display flex para que muestre una al lado de la otra */
+.contenedorArticle{
+    display: flex;
+    margin: auto;
+    justify-content: space-between;
+    max-width: 1024px;
+    padding-bottom: 5rem;
+}
+
+.contenedorArticle article{
+    margin: 0 0.5rem;
+    display: flex;
+    flex-direction: column;
+    align-content: space-between;
+    width: 300px;
+    min-height: 400px;
+    border-radius: 15px;
+    overflow: hidden;
+    background-color: var(--azulTexto);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+/* Hover para que se muestre una sombra más fuerte cuando nos posamos encima de cada pastilla */
+.contenedorArticle article:hover{
+    box-shadow: 0 0 20px rgba(0, 0, 0, 1);
+}
+
+.contenedorArticle article p, h3{
+    color: white;
+    padding: 0 2rem 2rem 2rem;
+    letter-spacing: 0.025em;
+}
+
+.contenedorArticle article p{
+    font-size: 1em;
+    font-weight: 300;
+}
+
+.contenedorArticle article p strong{
+    font-weight: 700;
+}
+
+.contenedorArticle article h3{
+    font-size: 2em;
+    font-weight: 700;
+    word-wrap: break-word;
+}
+
+.contenedorArticle article figure img{
+    max-width: 100%;
+    padding-bottom: 1rem;
+}
+
+
+
+
+
+
+/* 
+
+SEGUNDA SECCIÓN (HISTORIA)
+
+*/
+
+.historia{
+    width: 100%;
+    background-color: var(--gris);
+    color: var(--azulTexto);
+    padding-top: 2rem;
+}
+
+/* Logo añadido con css en la sección historia */
+.mach1-logo{
+    margin-top: 1rem;
+    height: 200px;
+    background: url(../assets/logos/Mach1_desktop.svg) no-repeat top center;;
+}
+
+.historia h2{
+    font-size: 3rem;
+    letter-spacing: 00.025em;
+    text-align: center;
+    padding: 1rem 0;
+}
+
+.contenedorHistoria{
+    max-width: 620px;
+    margin: auto;
+    padding: 1rem 0 4rem 0;
+}
+
+.contenedorHistoria p{
+    text-align: center;
+    font-weight: 300;
+    font-size: 1.2em;
+    letter-spacing: 00.025em;
+}
+
+.contenedorHistoria p strong{
+    font-weight: 700;
+}
+
+/* Div que contiene al video embebido con un width 100% y 75vh de height para que ocupe el 75% del alto del viewport */
+.contenedorVideo{
+    width: 100%;
+    height: 75vh;
+    display: flex;
+    justify-content: center;
+}
+
+/* Se le asigna un 70% del ancho del sitio al video y un 100% de alto con respecto a su padre (.contenedorVideo) */
+.contenedorVideo iframe{
+    padding-bottom: 4rem;
+    width: 70%;
+    height: 100%;
+}
+
+
+
+
+
+
+
+/* 
+
+TERCERA SECCIÓN (FORMULARIO)
+
+*/
+
+/* Imagen de fondo insertada con css para la sección que contiene al formulario */
+.testDrive{
+    background-image: url(../assets/banners/Formulario_BG.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    height: 1200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: 'Poppins', sans-serif;
+}
+
+form{
+    margin: 4rem 0;
+    max-width: 50%;
+    padding: 3rem 5rem;
+    color: var(--azulTexto);
+    background-color: rgba(15, 51, 114, 0.5);
+    border-radius: 15px;
+}
+
+input{
+    width: 100%;
+    margin: 1rem 0;
+    padding: 1rem;
+    background-color: rgba(7, 16, 36, 0.85);
+    border-radius: 5px;
+    border: 1px solid skyblue;
+    color: white;
+    font-size: 1em;
+    font-family: 'Poppins', sans-serif;
+}
+
+textarea{
+    width: 100%;
+    margin: 1rem 0;
+    padding: 1rem;
+    background-color: rgba(7, 16, 36, 0.85);
+    border-radius: 5px;
+    border: 1px solid skyblue;
+    color: white;
+    font-size: 1em;
+    font-family: 'Poppins', sans-serif;
+    resize: none;
+}
+
+button{
+    width: 100%;
+    margin: 1rem 0;
+    padding: 1rem;
+}
+
+#reset{
+    background-color: var(--azulTexto);
+    border-radius: 5px;
+    border: 2px solid dodgerblue;
+    font-size: 1.5em;
+    color: skyblue;
+    font-family: 'Poppins', sans-serif;
+}
+
+#reset:hover{
+    background-color: dodgerblue;
+    color: var(--azulTexto);
+    cursor: pointer;
+}
+
+#enviar{
+    margin: 0.5rem 0;
+    padding: 1.5rem;
+    background-color: #5c96fa;
+    border-radius: 5px;
+    border: none;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.5em;
+    font-weight: 700;
+    color: var(--azulTexto);
+}
+
+#enviar:hover{
+    background-color: white;
+    cursor: pointer;
+}
+
+form h2{
+    color: white;
+    text-transform: uppercase;
+    font-weight: 900;
+    font-size: 3.5vw;
+    line-height: 0.9em;
+}
+
+form p{
+    color: white;
+    font-size: 1.5vw;
+    font-weight: 200;
+    padding-bottom: 1rem;
+}
+
+/* Logo de caballo insertado con css */
+.logoMustang{
+    width: 150px;
+    padding: 1.5rem 0;
+}
+
+.logoMustang img{
+    width: 100%;
+    content: url(../assets/logos/Mustang_Logo.png);
+}
+
+
+
+
+
+
+
+/* 
+
+FOOTER
+
+*/
+/* Width 100% y display flex con direction column para el contenedor principal, de manera que muestre primero los 3 items del footer y debajo la firma */
+.contenedorFooter{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--azulTexto);
+    color: white;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Contenedor de los 3 items del footer, con display flex y direction row para que se muestren uno al lado del otro */
+.contenedorItems{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+/* Cada item ocupa un 30% del ancho total del sitio */
+.itemFooter{
+    width: 30%;
+    margin: 2rem 1rem;
+    padding: 0 1rem;
+    border-right: 1px solid var(--azulClaro);
+}
+
+.itemFooter p{
+    margin-top: 0.5rem;
+}
+
+.itemFooter a{
+    text-decoration: none;
+}
+
+.itemFooter a:visited{
+    color: white;
+}
+
+.itemFooter a:hover{
+    color: dodgerblue;
+}
+
+/* Se le quita la línea en el borde derecho al último item */
+.itemFooter:last-child{
+    border-right: none;
+}
+
+.itemFooter h4{
+    font-size: 1.5em;
+    margin: 1rem 0;
+}
+
+.redes img{
+    margin: 0.5rem;
+}
+
+.logoFooter{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.logoFooter img{
+    max-width: 100%;
+    content: url(../assets/logos/Ford_logo_desktop.png);
+}
+
+.firma{
+    margin: 2rem;
+}
+
+
+
+
+
+
+
+
+/* 
+
+-----------------------------------------------
+Media query para tablet (máximo 760px de ancho)
+-----------------------------------------------
+
+*/
+@media screen and (max-width: 760px){
+        /* 
+            MENÚ TABLET
+        */
+    header{
+        height: 200px;
+    }
+
+    .menu {
+        width: 100%;
+        flex-direction: column;
+        justify-content: space-around;
+    }
+
+    nav ul{
+        flex-wrap: wrap;
+    }
+
+
+        /* 
+            BANNER TABLET
+        */
+    .banner img{
+        content: url(../assets/banners/Banner_760.jpg);
+    }
+
+    .contenedorTitulo{
+        right: 30%;
+        text-shadow: 0 0 7px rgba(0, 0, 0, 0.8);
+    }
+
+    .contenedorTitulo h1{
+        font-size: 3em;
+    }
+
+
+        /* 
+            CARACTERÍSTICAS TABLET
+        */
+    .caracteristicas{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .caracteristicas h2{
+        font-size: 2.6em;
+        padding: 2.5rem 0;
+    }
+
+    .contenedorArticle{
+        flex-direction: column;
+    }
+
+    .contenedorArticle article{
+        margin: 1.5rem 0;
+    }
+
+
+        /* 
+            VIDEO EMBEBIDO TABLET
+        */
+    .contenedorVideo{
+        height: 60vh;
+    }
+    
+    .contenedorVideo iframe{
+        width: 90%;
+    }
+
+
+        /* 
+            FORMULARIO TABLET
+        */
+    form{
+        max-width: 90%;
+    }
+
+    form h2{
+        font-size: 6vw;
+    }
+
+    form p{
+        font-size: 3vw;
+    }
+
+    #reset{
+        font-size: 1.3em;
+    }
+
+    #enviar{
+        font-size: 1.5em;
+    }
+}
+
+
+
+
+
+
+
+
+/* 
+
+----------------------------------------------
+Media query para mobile (máximo 320px de ancho)
+----------------------------------------------
+
+*/
+@media screen and (max-width: 320px){
+        /* 
+            MENÚ MOBILE
+        */
+    /* Div que contiene a las listas con los items del menú no se muestra con un display none */
+    .menuMobile{
+        display: none;
+    }
+
+    nav{
+        margin: 0;
+    }
+
+    /* Img con la imagen que representa el botón del menú hamburguesa se muestra */
+    .hamburguesa{
+        display: inline-block;
+        padding: 26px;
+    }
+    
+    /* Cuando se pasa por encima del nav (donde el único contenido que se muestra es la img con el menú hamburguesa), el div con .menuMobile que contiene a las ul se muestra con un display flex y position absolute */
+    nav:hover .menuMobile{
+        display: flex;
+        position: absolute;
+        justify-content: center;
+        text-align: center;
+        left: 0;
+        top: 100px;
+        z-index: 1;
+        width: 100%;
+        background-color: var(--azulClaro);
+    }
+
+    nav ul li{
+        border-radius: 0;
+        padding: 1rem 100vw;
+    }
+
+    header{
+        height: 100px;
+    }
+
+    .menu{
+        flex-direction: row-reverse;
+    }
+
+    nav ul{
+        flex-direction: column;
+    }
+
+    /* Cuando hacemos hover al li que tiene un submenú la segunda ul se muestra con un position static para que se encuentre debajo del item padre y empuje a los demas li abajo */
+    .dropdown:hover .modelos{
+        display: flex;
+        justify-content: center;
+        position: static;
+        background-color: #5c96fa;
+    }
+    
+    #mustang{
+        border-radius: 0;
+        padding: 1rem 100vw 0 100vw;
+        margin-bottom: 1rem;
+    }
+    
+    .modelos li{
+        padding: 1rem 100vw;
+    }
+
+    .modelos li a{
+        color: var(--azulTexto);
+    }
+
+    .modelos li:hover{
+        background-color:var(--azulTexto);
+    }
+
+    .modelos li:hover a{
+        color: white;
+    }
+    
+
+        /* 
+            BANNER MOBILE
+        */
+    .banner img{
+        content: url(../assets/banners/Banner_320.jpg);
+    }
+    
+    .contenedorTitulo{
+        right: 0;
+        padding-top: 1rem;
+    }
+    
+    .contenedorTitulo h1{
+        font-size: 3em;
+    }
+
+
+        /* 
+            CARACTERÍSTICAS MOBILE
+        */
+    .caracteristicas h2{
+        font-size: 2.5em;
+        padding: 2rem 0;
+    }
+    
+    .contenedorArticle article{
+        margin: 1rem 0;
+    }
+
+
+        /* 
+            HISTORIA MOBILE
+        */
+    .contenedorHistoria{
+        padding: 1rem 1rem 4rem 1rem;
+    }
+
+
+        /* 
+            VIDEO EMBEBIDO MOBILE
+        */
+    .contenedorVideo{
+        height: 50vh;
+    }
+    
+    .contenedorVideo iframe{
+        width: 100%;
+    }
+
+
+
+        /* 
+            FORMULARIO MOBILE
+        */
+    form{
+        max-width: 100%;
+        border-radius: 0;
+        padding: 3rem 1rem;
+        margin: 0;
+    }
+
+    form h2{
+        font-size: 2.5em;
+        text-align: center;
+    }
+
+    form p{
+        font-size: 1.2em;
+        text-align: center;
+    }
+
+    .logoMustang{
+        padding-top: 6rem;
+    }
+
+
+        /* 
+            FOOTER MOBILE
+        */
+    .contenedorItems{
+        flex-direction: column;
+    }
+
+    .itemFooter{
+        width: 100%;
+        margin: 0;
+        padding: 1rem;
+        border-right: none;
+        border-bottom: 1px solid var(--azulClaro);
+        text-align: center;
+    }
+
+    .itemFooter h4{
+        margin: 0;
+        margin-bottom: 1rem;
+    }
+
+    .itemFooter:last-child{
+        border-bottom: none;
+    }
+
+    .redes img{
+        margin: 0;
+    }
+
+    .firma{
+        text-align: center;
+    }
+}
